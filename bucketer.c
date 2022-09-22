@@ -12,11 +12,11 @@ struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
   for(int i=0;i<nBatteries;i++)
   {
     if(cycles[i]<410)
-      counts.lowCount++;
+      counts.lowCount++;   //No of batteries that underwent low charge cycles
     if(cycles[i]>=410&&cycles[i]<=909)
-      counts.mediumCount++;
+      counts.mediumCount++;  //No of batteries that underwent medium charge cycles
     if(cycles[i]>=910)
-      counts.highCount++;
+      counts.highCount++;   //No of batteries that underwent high charge cycles
   }
   return counts;
 }
